@@ -1,22 +1,18 @@
-public class Calculate {
+import java.util.Scanner;
+
+public class Addition {
     public static void main(String[] args) {
-        System.out.println("Area of square: " + Square(5));
-        System.out.println("Area of Triangle: " + Triangle(2, 5));
-        System.out.println("Area of Rectangle: " + Rectangle(2, 2));
-    }
-
-    static int Square(int n) {
-        int area = n * n;
-        return area;
-    }
-
-    static double Triangle(int h, int b) {
-        double area = 0.5 * h * b;
-        return area;
-    }
-
-    static int Rectangle(int l, int b) {
-        int area = l * b;
-        return area;
-    }
+        Scanner input = new Scanner(System.in);
+        
+        // Ask user to input two numbers
+        System.out.print("Enter the first number: ");
+        int num1 = input.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int num2 = input.nextInt();
+        
+        // Add the two numbers and display the result
+        int sum = num1 + num2;
+        System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum + ".");
+    }
 }
